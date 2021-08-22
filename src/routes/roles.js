@@ -14,6 +14,7 @@ router.get('/', getRoles);
 
 router.post('/', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
+    body('congregacion_id',"Debe Ingresar Un Nombre.").notEmpty().isInt(),
 ], createRol)
 
 router.get('/:id', [
@@ -22,6 +23,7 @@ router.get('/:id', [
 
 router.put('/:id', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
+    body('congregacion_id',"Debe Ingresar Un Nombre.").notEmpty().isInt(),
 ], updateRol)
 
 router.delete('/:id', deleteRol)

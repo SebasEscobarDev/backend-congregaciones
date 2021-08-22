@@ -46,10 +46,10 @@ Facturacion.init({
         type: DataTypes.BIGINT,
         allowNull: false
     }
-}, { sequelize, modelName: 'user', tableName: 'users' });
+}, { sequelize, modelName: 'facturacion', tableName: 'facturaciones' });
 
 Facturacion.belongsTo(Contacto, { as: 'contacto', foreignKey: 'contacto_id' });
-Facturacion.belongsTo(User, { as: 'maestro', foreignKey: 'user_id' });
+Facturacion.belongsTo(User, { as: 'user', foreignKey: 'user_id' });
 Facturacion.belongsTo(Card, { as: 'card', foreignKey: 'card_id' });
 Facturacion.belongsTo(Moneda, { as: 'moneda', foreignKey: 'moneda_id' });
 Facturacion.belongsTo(EstadoFacturacion, { as: 'estado', foreignKey: 'estado_id' });

@@ -1,0 +1,37 @@
+@api = http://localhost:5500/api/contactos
+
+### GET ALL
+GET {{api}}/
+
+### CREATE
+POST {{api}}/
+Content-Type: application/json
+
+{
+    "from": "Pruebas",
+    "name": "Josefito",
+    "phone": "573148406835",
+    "country": "COL",
+    "estadocontacto_id": 1,
+    "user_id": 1,
+    "congregacion_id": 1
+}
+
+### GET BY ID
+GET {{api}}/2
+
+### UPDATE BY ID
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "name":"Sebastián González Escobarrr",
+    "email":"admin@master.com",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":1,
+    "congregacion_id":1
+}
+
+### DELETE BY ID
+DELETE {{api}}/1

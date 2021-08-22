@@ -27,7 +27,7 @@ export const getRol = async(req, res, next) => {
 
 export const createRol = async(req, res, next) => {
     try{
-        const rol = await Rol.createRol(req.body.name);
+        const rol = await Rol.createRol(req.body);
         return res.status(200).json(rol);
     }catch( error ){
         return res.status(500).json({
@@ -39,7 +39,7 @@ export const createRol = async(req, res, next) => {
 
 export const updateRol = async(req, res, next) => {
     try{
-        const rol = await Rol.updateRol(req.params.id, req.body.name);
+        const rol = await Rol.updateRol(req.params.id, req.body);
         return res.status(200).json(rol);
     }catch( error ){
         return res.status(500).json({

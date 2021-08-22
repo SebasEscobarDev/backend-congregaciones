@@ -1,0 +1,33 @@
+@api = http://localhost:5500/api/typescard
+
+### GET ALL
+GET {{api}}/
+
+### CREATE
+POST {{api}}/
+Content-Type: application/json
+
+{
+    "name":"Western",
+    "fields": ["phone","name"],
+    "congregacion_id":1
+}
+
+### GET BY ID
+GET {{api}}/1
+
+### UPDATE BY ID
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "name":"Sebastián González Escobarrr",
+    "email":"admin@master.com",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":1,
+    "congregacion_id":1
+}
+
+### DELETE BY ID
+DELETE {{api}}/1

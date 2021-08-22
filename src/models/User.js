@@ -3,9 +3,6 @@ import { literal, cast, col } from 'sequelize'
 import bcrypt from 'bcryptjs'
 
 class User {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
 
     async getUsers(){
         return await UserModel.findAll({
@@ -34,12 +31,12 @@ class User {
     async createUser(body){
         const hashPass = await bcrypt.hash(body.password, 12)
         return await UserModel.create({ 
-                name: body.name,
-                email: body.email,
-                password: hashPass,
-                active: body.active,
-                rol_id: body.rol_id,
-                congregacion_id: body.congregacion_id,
+                name:               body.name,
+                email:              body.email,
+                password:           hashPass,
+                active:             body.active,
+                rol_id:             body.rol_id,
+                congregacion_id:    body.congregacion_id,
             },
             {
                 include: [

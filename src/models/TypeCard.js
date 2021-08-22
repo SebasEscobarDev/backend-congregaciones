@@ -2,10 +2,6 @@ import TypeCardModel from './ORM/TypeCard';
 import { literal, cast, col, json } from 'sequelize'
 
 class TypeCard {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
-
     async getTypesCard(){
         return await TypeCardModel.findAll({
             include: [
@@ -31,7 +27,7 @@ class TypeCard {
     async createTypeCard(body){
         return await TypeCardModel.create({ 
                 name: body.name,
-                fields: json(body.fields),
+                fields: body.fields,
                 congregacion_id: body.congregacion_id,
             },
             { 
@@ -46,7 +42,7 @@ class TypeCard {
     async updateTypeCard(id, body){
         return await TypeCardModel.update({ 
                 name: body.name,
-                fields: json(body.fields),
+                fields: body.fields,
             },
             { 
                 where : { id },

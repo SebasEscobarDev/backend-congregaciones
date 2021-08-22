@@ -1,8 +1,8 @@
 import { DataTypes, Model } from 'sequelize'
 import { sequelize } from '../../database/db'
 import EstadoContacto from './EstadoContacto'
-import Congregacion from './Congregacion'
 import User from './User'
+import Congregacion from './Congregacion'
 
 class Contacto extends Model {}
 Contacto.init({
@@ -42,7 +42,7 @@ Contacto.init({
 }, { sequelize, modelName: 'contacto', tableName: 'contactos' })
 
 Contacto.belongsTo(EstadoContacto, { as: 'estado', foreignKey: 'estadocontacto_id' })
-Contacto.hasOne(User, { as: 'maestro', foreignKey: 'user_id' })
+Contacto.belongsTo(User, { as: 'user', foreignKey: 'user_id', constraints: false })
 Contacto.belongsTo(Congregacion, { as: 'congregacion', foreignKey: 'congregacion_id' })
 
 export default Contacto

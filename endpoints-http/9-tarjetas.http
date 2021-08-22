@@ -1,0 +1,31 @@
+@api = http://localhost:5500/api/cards
+
+### GET ALL
+GET {{api}}/
+
+### CREATE
+POST {{api}}/
+Content-Type: application/json
+
+{
+    "active":1,
+    "values": ["3148406835","WC Cata"],
+    "typecard_id":1,
+    "congregacion_id":1
+}
+
+### GET BY ID
+GET {{api}}/2
+
+### UPDATE BY ID
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "active":1,
+    "values": ["Bc Francisco","name"],
+    "typecard_id":1,
+}
+
+### DELETE BY ID
+DELETE {{api}}/1

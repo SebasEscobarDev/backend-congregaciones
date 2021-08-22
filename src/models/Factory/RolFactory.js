@@ -11,12 +11,12 @@ class Rol {
         return await rol.getRol(id);
     }
 
-    static async createRol(name) {
-        return await rol.createRol(name);
+    static async createRol(body) {
+        return await rol.createRol(body);
     }
 
-    static async updateRol(id, name) {
-        return await rol.updateRol(id, name);
+    static async updateRol(id, body) {
+        return await rol.updateRol(id, body);
     }
 
     static async deleteRol(id){

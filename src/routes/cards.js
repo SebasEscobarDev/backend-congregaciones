@@ -16,7 +16,7 @@ router.get('/', getCards);
 
 router.post('/', [
     body('active',"Debe Ingresar El campo active.").notEmpty().escape().trim().isInt(),
-    body('values',"Debe Ingresar Los Valores Del Tipo De Tarjeta.").notEmpty().escape().trim().isJSON(),
+    body('values',"Debe Ingresar Los Valores Del Tipo De Tarjeta.").notEmpty().isJSON(),
     body('typecard_id',"Debe Ingresar El tipo de Tarjeta.").notEmpty().escape().trim().isInt(),
     body('congregacion_id',"Debe Ingresar Una Congregación Registrada.").notEmpty().escape().trim().isInt()
 ], createCard)
@@ -27,7 +27,7 @@ router.get('/:id', [
 
 router.put('/:id', [ 
     body('active',"Debe Ingresar El campo active.").notEmpty().escape().trim().isInt(),
-    body('values',"Debe Ingresar Los Valores Del Tipo De Tarjeta.").notEmpty().escape().trim().isJSON(),
+    body('values',"Debe Ingresar Los Valores Del Tipo De Tarjeta.").notEmpty().isJSON(),
     body('typecard_id',"Debe Ingresar El tipo de Tarjeta.").notEmpty().escape().trim().isInt(),
     body('congregacion_id',"Debe Ingresar Una Congregación Registrada.").notEmpty().escape().trim().isInt()
 ], updateCard)

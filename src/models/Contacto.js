@@ -10,7 +10,7 @@ class Contacto {
         return await ContactoModel.findAll({
             include: [
                 { association: 'estado', attributes: ['name'] },
-                { association: 'maestro', attributes: ['name'] },
+                { association: 'user', attributes: ['name'] },
                 { association: 'congregacion', attributes: ['name'] },
             ],
             order: [
@@ -24,7 +24,7 @@ class Contacto {
         return await ContactoModel.findOne({
             include: [
                 { association: 'estado', attributes: ['name'] },
-                { association: 'maestro', attributes: ['name'] },
+                { association: 'user', attributes: ['name'] },
                 { association: 'congregacion', attributes: ['name'] },
             ],
             where: { id },
@@ -45,7 +45,7 @@ class Contacto {
             { 
                 include: [
                     { association: 'estado', attributes: ['name'] },
-                    { association: 'maestro', attributes: ['name'] },
+                    { association: 'user', attributes: ['name'] },
                     { association: 'congregacion', attributes: ['name'] },
                 ],
                 raw: true 
@@ -65,7 +65,7 @@ class Contacto {
                 where : { id },
                 include: [
                     { association: 'estado', attributes: ['name'] },
-                    { association: 'maestro', attributes: ['name'] },
+                    { association: 'user', attributes: ['name'] },
                     { association: 'congregacion', attributes: ['name'] },
                 ],
                 returning: true,

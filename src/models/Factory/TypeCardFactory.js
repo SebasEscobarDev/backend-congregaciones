@@ -4,7 +4,7 @@ const typecard = new TypeCardModel();
 class TypeCard {
     
     static async getTypesCard() {
-        return await typecard.getCards();
+        return await typecard.getTypesCard();
     }
 
     static async getTypeCard(id){

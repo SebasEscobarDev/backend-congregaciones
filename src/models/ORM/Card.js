@@ -28,8 +28,8 @@ Card.init({
     }
 }, { 
     sequelize, 
-    modelName: 'user', 
-    tableName: 'users',
+    modelName: 'card', 
+    tableName: 'cards',
     timestamps: false
 });
 

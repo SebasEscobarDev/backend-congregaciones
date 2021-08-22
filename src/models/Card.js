@@ -33,7 +33,7 @@ class Card {
     async createCard(body){
         return await CardModel.create({ 
                 active: body.active,
-                values: json(body.values),
+                values: body.values,
                 typecard_id: body.typecard_id,
                 congregacion_id: body.congregacion_id
             },
@@ -42,7 +42,8 @@ class Card {
                     { association: 'typecard', attributes: ['name'] },
                     { association: 'congregacion', attributes: ['name'] },
                 ],
-                raw: true 
+                raw: true,
+                returning: true
             }
         ).catch(error => { console.log(error) })
     }
@@ -50,7 +51,7 @@ class Card {
     async updateCard(id, body){
         return await CardModel.update({ 
                 active: body.active,
-                values: json(body.values),
+                values: body.values,
                 typecard_id: body.typecard_id,
             },
             { 

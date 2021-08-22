@@ -1,0 +1,29 @@
+@api = http://localhost:5500/api/monedas
+
+### GET ALL
+GET {{api}}/
+
+### CREATE
+POST {{api}}/
+Content-Type: application/json
+
+{
+    "name": "COP",
+    "cop_value": 1000.00,
+    "congregacion_id": 1
+}
+
+### GET BY ID
+GET {{api}}/1
+
+### UPDATE BY ID
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "name": "COP",
+    "cop_value": 1000.00
+}
+
+### DELETE BY ID
+DELETE {{api}}/1

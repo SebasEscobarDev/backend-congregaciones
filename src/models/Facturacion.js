@@ -1,19 +1,22 @@
-import FacturacionModel from './ORM/Facturacion';
+import FacturacionModel from './ORM/Facturacion'
 
 class Facturacion {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
 
     async getFacturaciones(){
         return await FacturacionModel.findAll({
             include: [
-                { assosiation: 'contacto' , attributes: ['name'] },
-                { assosiation: 'maestro' , attributes: ['name'] },
-                { assosiation: 'card' , attributes: ['name'] },
-                { assosiation: 'moneda' , attributes: ['name'] },
-                { assosiation: 'estado' , attributes: ['name'] },
-                { assosiation: 'congregacion' , attributes: ['name'] },
+                { association: 'contacto' , attributes: ['name'] },
+                { association: 'user' , attributes: ['name'] },
+                { 
+                    association: 'card' ,
+                    attributes: ['values'],
+                    include: [
+                        { association: 'typecard', attributes: ['name','fields'] }
+                    ]
+                },
+                { association: 'moneda' , attributes: ['name'] },
+                { association: 'estado' , attributes: ['name'] },
+                { association: 'congregacion' , attributes: ['name'] },
             ],
             order: [
                 ['id', 'ASC']
@@ -25,12 +28,12 @@ class Facturacion {
     async getFacturacion(id){
         return await FacturacionModel.findOne({
             include: [
-                { assosiation: 'contacto' , attributes: ['name'] },
-                { assosiation: 'maestro' , attributes: ['name'] },
-                { assosiation: 'card' , attributes: ['name'] },
-                { assosiation: 'moneda' , attributes: ['name'] },
-                { assosiation: 'estado' , attributes: ['name'] },
-                { assosiation: 'congregacion' , attributes: ['name'] },
+                { association: 'contacto' , attributes: ['name'] },
+                { association: 'user' , attributes: ['name'] },
+                { association: 'card' },
+                { association: 'moneda' , attributes: ['name'] },
+                { association: 'estado' , attributes: ['name'] },
+                { association: 'congregacion' , attributes: ['name'] },
             ],
             where: { id },
             raw: true 
@@ -49,14 +52,14 @@ class Facturacion {
             },
             {
                 include: [
-                    { assosiation: 'contacto' , attributes: ['name'] },
-                    { assosiation: 'maestro' , attributes: ['name'] },
-                    { assosiation: 'card' , attributes: ['name'] },
-                    { assosiation: 'moneda' , attributes: ['name'] },
-                    { assosiation: 'estado' , attributes: ['name'] },
-                    { assosiation: 'congregacion' , attributes: ['name'] },
+                    { association: 'contacto' , attributes: ['name'] },
+                    { association: 'user' , attributes: ['name'] },
+                    { association: 'card' },
+                    { association: 'moneda' , attributes: ['name'] },
+                    { association: 'estado' , attributes: ['name'] },
+                    { association: 'congregacion' , attributes: ['name'] }
                 ],
-                raw: true 
+                raw: true
             }
         ).catch(error => { console.log(error); });
     }
@@ -73,12 +76,12 @@ class Facturacion {
             { 
                 where : { id },
                 include: [
-                    { assosiation: 'contacto' , attributes: ['name'] },
-                    { assosiation: 'maestro' , attributes: ['name'] },
-                    { assosiation: 'card' , attributes: ['name'] },
-                    { assosiation: 'moneda' , attributes: ['name'] },
-                    { assosiation: 'estado' , attributes: ['name'] },
-                    { assosiation: 'congregacion' , attributes: ['name'] }
+                    { association: 'contacto' , attributes: ['name'] },
+                    { association: 'user' , attributes: ['name'] },
+                    { association: 'card' },
+                    { association: 'moneda' , attributes: ['name'] },
+                    { association: 'estado' , attributes: ['name'] },
+                    { association: 'congregacion' , attributes: ['name'] }
                 ],
                 returning: true,
                 raw: true

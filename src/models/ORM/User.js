@@ -28,7 +28,7 @@ User.init({
     },
     rol_id: {
         type: DataTypes.BIGINT,
-        allowNull: false
+        allowNull: false,
     },
     congregacion_id: {
         type: DataTypes.BIGINT,
@@ -36,7 +36,7 @@ User.init({
     }
 }, { sequelize, modelName: 'user', tableName: 'users' });
 
-User.belongsTo(Rol, { as: 'rol', foreignKey: 'rol_id' });
+User.belongsTo(Rol, { as:'rol', foreignKey: 'rol_id' });
 User.belongsTo(Congregacion, { as: 'congregacion', foreignKey: 'congregacion_id' });
 
 

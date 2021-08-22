@@ -1,0 +1,28 @@
+@api = http://localhost:5500/api/estadoscontacto
+
+### GET ALL
+GET {{api}}/
+
+### CREATE
+POST {{api}}/
+Content-Type: application/json
+
+{
+    "name": "Nuevo",
+    "plural_name": "Nuevos",
+    "congregacion_id": 1
+}
+
+### GET BY ID
+GET {{api}}/1
+
+### UPDATE BY ID
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "name": "Nuevos"
+}
+
+### DELETE BY ID
+DELETE {{api}}/1

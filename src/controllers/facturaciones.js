@@ -27,8 +27,8 @@ export const getFacturacion = async(req, res, next) => {
 
 export const createFacturacion = async(req, res, next) => {
     try{
-        const user = await Facturacion.createFacturacion(req.body);
-        return res.status(200).json(user);
+        const facturacion = await Facturacion.createFacturacion(req.body);
+        return res.status(200).json(facturacion);
     }catch( error ){
         return res.status(500).json({
             message: 'Internal server error',
