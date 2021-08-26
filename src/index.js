@@ -45,4 +45,7 @@ app.listen(app.get('port'), () => {
 	//sequelize.sync({force:true})
 })
 
+//USERS
+//@HAIMETUTOYO
+
 export default app
