@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "name":"Western",
-    "fields": ["phone","name"],
+    "fields": ["# de cuenta","Cédula"],
     "congregacion_id":1
 }
 

@@ -8,8 +8,8 @@ POST {{api}}/
 Content-Type: application/json
 
 {
-    "name": "COP",
-    "cop_value": 1000.00,
+    "name": "USD",
+    "cop_value": 3500.00,
     "congregacion_id": 1
 }
 

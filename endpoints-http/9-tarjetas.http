@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "active":1,
-    "values": ["3148406835","WC Cata"],
+    "values": ["BC.1020","1053855581"],
     "typecard_id":1,
     "congregacion_id":1
 }

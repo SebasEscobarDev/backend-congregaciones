@@ -9,7 +9,7 @@ class Card {
     async getCards(){
         return await CardModel.findAll({
             include: [
-                { association: 'typecard', attributes: ['name'] },
+                { association: 'typecard', attributes: ['name','fields'] },
                 { association: 'congregacion', attributes: ['name'] },
             ],
             order: [
