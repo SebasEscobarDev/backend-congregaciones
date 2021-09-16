@@ -15,7 +15,7 @@ class Rol {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getRol(id){
@@ -25,7 +25,7 @@ class Rol {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createRol(body){
@@ -38,7 +38,7 @@ class Rol {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateRol(id,body){
@@ -51,13 +51,13 @@ class Rol {
                 where: { id }, 
                 returning: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteRol(id){
         return await RolModel.destroy({ 
             where: { id }
-        }).catch(error => { console.log(error) })
+        })
     }
 }
 

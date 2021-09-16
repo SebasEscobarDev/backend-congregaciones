@@ -15,7 +15,7 @@ class EstadoContacto {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getEstadoContacto(id){
@@ -25,7 +25,7 @@ class EstadoContacto {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createEstadoContacto(body){
@@ -39,7 +39,7 @@ class EstadoContacto {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateEstadoContacto(id,body){
@@ -47,9 +47,7 @@ class EstadoContacto {
                 name: body.name,
                 plural_name: body.plural_name
             },{ where: { id }, returning: true }
-        ).catch(error => {
-            console.log(error);
-        });
+        )
     }
 
     async deleteEstadoContacto(id){

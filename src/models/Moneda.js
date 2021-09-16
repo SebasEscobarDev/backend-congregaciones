@@ -12,8 +12,6 @@ class Moneda {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => {
-            console.log(error)
         })
     }
 
@@ -24,8 +22,6 @@ class Moneda {
             ],
             where: { id },
             raw: true 
-        }).catch(error => {
-            console.log(error)
         })
     }
 

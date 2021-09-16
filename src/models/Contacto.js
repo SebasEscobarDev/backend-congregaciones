@@ -17,7 +17,7 @@ class Contacto {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getContacto(id){
@@ -29,7 +29,7 @@ class Contacto {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createContacto(body){
@@ -50,7 +50,7 @@ class Contacto {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateContacto(id, body){
@@ -71,13 +71,13 @@ class Contacto {
                 returning: true,
                 raw: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteContacto(id){
         return await ContactoModel.destroy({ 
             where: { id }
-        }).catch(error => { console.log(error) })
+        })
         
     }
 }

@@ -20,12 +20,12 @@ Content-Type: application/json
 GET {{api}}/1
 
 ### UPDATE BY ID
-PUT {{api}}/1
+PUT {{api}}/2
 Content-Type: application/json
 
 {
-    "name":"Sebastián González Escobarrr",
-    "email":"admin@master.com",
+    "name":"Sebastián Gónzalez Escobar",
+    "email":"master222@admin.com",
     "password": "qaws12pj-22",
     "active":1,
     "rol_id":1,
@@ -33,4 +33,19 @@ Content-Type: application/json
 }
 
 ### DELETE BY ID
-DELETE {{api}}/1
+DELETE {{api}}/3
+
+
+###
+POST {{api}}/login
+Content-Type: application/json
+
+{
+    "email":"master@admin.com",
+    "password": "qaws12pj-22"
+}
+
+###
+GET {{api}}/get/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE2MzA0MTczMjEsImV4cCI6MTYzMDUwMzcyMX0.dy1NVJW0gEHh1q-wJThed89gylO1Gr4RQcT5H8-FQvk

@@ -2,10 +2,22 @@ import UserModel from './ORM/User';
 import { literal, cast, col } from 'sequelize'
 import bcrypt from 'bcryptjs'
 
+
 class User {
 
+    async login(email){
+        return await UserModel.findOne({
+            where: { email: email },
+            raw: true
+        })
+    }
+
+    async getUserLogin(req,res) {
+        
+    }
+
     async getUsers(){
-        return await UserModel.findAll({
+        const sql = await UserModel.findAll({
             include: [
                 { association: 'rol', attributes: ['name'] },
                 { association: 'congregacion', attributes: ['name'] },
@@ -14,7 +26,11 @@ class User {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
+
+        console.log( sql )
+
+        return sql
     }
 
     async getUser(id){
@@ -25,7 +41,7 @@ class User {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createUser(body){
@@ -49,10 +65,11 @@ class User {
     }
 
     async updateUser(id, body){
+        const hashPass = await bcrypt.hash(body.password, 12)
         return await UserModel.update({ 
                 name: body.name,
                 email: body.email,
-                password: body.password,
+                password: hashPass,
                 active: body.active,
                 rol_id: body.rol_id
             },
@@ -65,13 +82,13 @@ class User {
                 returning: true,
                 raw: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteUser(id){
         return await UserModel.destroy({ 
             where: { id }
-        }).catch(error => { console.log(error) })
+        })
     }
 }
 

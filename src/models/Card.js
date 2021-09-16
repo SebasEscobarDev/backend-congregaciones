@@ -16,7 +16,7 @@ class Card {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getCard(id){
@@ -27,7 +27,7 @@ class Card {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createCard(body){
@@ -45,7 +45,7 @@ class Card {
                 raw: true,
                 returning: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateCard(id, body){
@@ -63,7 +63,7 @@ class Card {
                 returning: true,
                 raw: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteCard(id){

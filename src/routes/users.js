@@ -5,7 +5,9 @@ import {
     createUser,
     getUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    login,
+    getUserLogin
 } from '../controllers/users'
 import { auth } from './auth'
 const router = Router()
@@ -43,5 +45,21 @@ router.put('/:id', [
 ], updateUser)
 
 router.delete('/:id', deleteUser)
+
+
+//LOGIN
+router.post('/login',[
+    body('email',"Invalid email address")
+        .notEmpty()
+        .trim()
+        .isEmail(),
+    body('password',"The Password must be of minimum 4 characters length")
+        .notEmpty()
+        .trim()
+        .isLength({ min: 4 }),
+], login);
+
+//GET USER LOGIN WITH TOKEN
+router.get('/get/login', getUserLogin);
 
 export default router

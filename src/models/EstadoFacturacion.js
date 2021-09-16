@@ -15,7 +15,7 @@ class EstadoFacturacion {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getEstadoFacturacion(id){
@@ -25,7 +25,7 @@ class EstadoFacturacion {
             ],
             where: { id },
             raw: true 
-        }).catch( error => { console.log(error) })
+        })
     }
 
     async createEstadoFacturacion(body){
@@ -39,7 +39,7 @@ class EstadoFacturacion {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateEstadoFacturacion(id,body){
@@ -53,13 +53,13 @@ class EstadoFacturacion {
                 where: { id },
                 returning: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteEstadoFacturacion(id){
         return await EstadoFacturacionModel.destroy({ 
             where: { id }
-        }).catch(error => { console.log(error) })
+        })
     }
 }
 

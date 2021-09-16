@@ -12,14 +12,14 @@ class Congregacion {
                 ['id', 'ASC']
             ],
             raw: true
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getCongregacion(id){
         return await CongregacionModel.findOne({
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createCongregacion(body){
@@ -28,7 +28,7 @@ class Congregacion {
                 active: body.active
             },
             { raw: true }
-        ).catch(error => { console.log(error); });
+        )
     }
 
     async updateCongregacion(id, body){
@@ -37,7 +37,7 @@ class Congregacion {
                 active: body.active
             },
             { where: { id }, returning: true }
-        ).catch(error => { console.log(error); });
+        )
     }
 
     async deleteCongregacion(id){

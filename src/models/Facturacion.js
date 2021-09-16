@@ -22,7 +22,7 @@ class Facturacion {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getFacturacion(id){
@@ -37,7 +37,7 @@ class Facturacion {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createFacturacion(body){
@@ -86,13 +86,13 @@ class Facturacion {
                 returning: true,
                 raw: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteFacturacion(id){
         return await FacturacionModel.destroy({ 
             where: { id }
-        }).catch(error => { console.log(error) })
+        })
     }
 }
 

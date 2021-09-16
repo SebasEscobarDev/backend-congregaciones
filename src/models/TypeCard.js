@@ -11,7 +11,7 @@ class TypeCard {
                 ['id', 'ASC']
             ],
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async getTypeCard(id){
@@ -21,7 +21,7 @@ class TypeCard {
             ],
             where: { id },
             raw: true 
-        }).catch(error => { console.log(error) })
+        })
     }
 
     async createTypeCard(body){
@@ -36,7 +36,7 @@ class TypeCard {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async updateTypeCard(id, body){
@@ -52,7 +52,7 @@ class TypeCard {
                 returning: true,
                 raw: true
             }
-        ).catch(error => { console.log(error) })
+        )
     }
 
     async deleteTypeCard(id){
