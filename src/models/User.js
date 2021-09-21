@@ -17,7 +17,7 @@ class User {
     }
 
     async getUsers(){
-        const sql = await UserModel.findAll({
+        return await UserModel.findAll({
             include: [
                 { association: 'rol', attributes: ['name'] },
                 { association: 'congregacion', attributes: ['name'] },
@@ -27,10 +27,6 @@ class User {
             ],
             raw: true 
         })
-
-        console.log( sql )
-
-        return sql
     }
 
     async getUser(id){
@@ -61,7 +57,7 @@ class User {
                 ],
                 raw: true 
             }
-        ).catch(error => { console.log(error); });
+        )
     }
 
     async updateUser(id, body){

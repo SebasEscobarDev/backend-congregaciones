@@ -13,7 +13,6 @@ import contactosRoutes from './routes/contactos'
 import typescardRoutes from './routes/typesCard'
 import cardsRoutes from './routes/cards'
 import facturacionesRoutes from './routes/facturaciones'
-import bodyParser from 'body-parser'
 import { sequelize } from './database/db'
 
 const app = express()
@@ -25,8 +24,8 @@ app.set('port', process.env.APP_PORT)
 app.use(morgan('dev'))
 app.use(cors())
 app.use( session({secret: '123456', resave: true, saveUninitialized: true}) );
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 //usar rutas
 app.use('/api/congregaciones', congregacionesRoutes)

@@ -70,7 +70,6 @@ export const login = async (req, res) =>{
     if(!errors.isEmpty()){
         return res.status(422).json({ errors: errors.array() });
     }
-
     try{
         const user = await User.login(req.body.email);
         if ( user.email != req.body.email  ) {
