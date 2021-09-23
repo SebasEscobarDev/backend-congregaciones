@@ -8,6 +8,9 @@ class Moneda {
 
     async getMonedas(){
         return await MonedaModel.findAll({
+            attributes: [
+                [ cast(col('cop_value'), 'INTEGER')],
+            ],
             order: [
                 ['id', 'ASC']
             ],

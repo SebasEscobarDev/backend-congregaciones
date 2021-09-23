@@ -23,9 +23,9 @@ Content-Type: application/json
 
 {
     "active":1,
-    "values": ["Bc Francisco","name"],
+    "values": ["WC.1020","1053855581"],
     "typecard_id":1,
+    "congregacion_id":1
 }
-
 ### DELETE BY ID
 DELETE {{api}}/1

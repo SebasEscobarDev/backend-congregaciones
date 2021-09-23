@@ -16,11 +16,11 @@ Content-Type: application/json
 GET {{api}}/1
 
 ### UPDATE BY ID
-PUT {{api}}/2
+PUT {{api}}/5
 Content-Type: application/json
 
 {
-    "name": "Congregacion Masters",
+    "name": "Congregacion 4",
     "active": 1
 }
 

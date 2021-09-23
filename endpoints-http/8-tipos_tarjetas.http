@@ -21,11 +21,8 @@ PUT {{api}}/1
 Content-Type: application/json
 
 {
-    "name":"Sebastián González Escobarrr",
-    "email":"admin@master.com",
-    "password": "qaws12pj-22",
-    "active":1,
-    "rol_id":1,
+    "name":"Western",
+    "fields": ["Cuenta","Cédula"],
     "congregacion_id":1
 }
 
