@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "name": "USD",
-    "cop_value": 3500.00,
+    "cop_value": 1000,
     "congregacion_id": 1
 }
 

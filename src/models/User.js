@@ -61,6 +61,25 @@ class User {
     }
 
     async updateUser(id, body){
+        return await UserModel.update({ 
+                name: body.name,
+                email: body.email,
+                active: body.active,
+                rol_id: body.rol_id
+            },
+            { 
+                where : { id },
+                include: [
+                    { association: 'rol', attributes: ['name'] },
+                    { association: 'congregacion', attributes: ['name'] },
+                ],
+                returning: true,
+                raw: true
+            }
+        )
+    }
+
+    async updateUserWithPass(id, body){
         const hashPass = await bcrypt.hash(body.password, 12)
         return await UserModel.update({ 
                 name: body.name,

@@ -2,14 +2,11 @@ import MonedaModel from './ORM/Moneda';
 import { literal, cast, col } from 'sequelize'
 
 class Moneda {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
-
+    
     async getMonedas(){
         return await MonedaModel.findAll({
-            attributes: [
-                [ cast(col('cop_value'), 'INTEGER')],
+            include: [
+                { association: 'congregacion', attributes: ['name'] },
             ],
             order: [
                 ['id', 'ASC']

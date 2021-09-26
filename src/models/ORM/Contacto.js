@@ -31,6 +31,10 @@ Contacto.init({
         type: DataTypes.BIGINT,
         allowNull: false
     },
+    last_send: {
+        type: DataTypes.DATE,
+        allowNull: true
+    },
     user_id: {
         type: DataTypes.BIGINT,
         allowNull: false

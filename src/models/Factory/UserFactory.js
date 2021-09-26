@@ -27,6 +27,10 @@ class User {
         return await user.updateUser(id, body)
     }
 
+    static async updateUserWithPass(id, body) {
+        return await user.updateUserWithPass(id, body)
+    }
+
     static async deleteUser(id){
         return await user.deleteUser(id)
     }

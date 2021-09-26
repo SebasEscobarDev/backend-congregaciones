@@ -8,7 +8,7 @@ POST {{api}}/
 Content-Type: application/json
 
 {
-    "name": "Admin",
+    "name": "Administrador",
     "congregacion_id":1
 }
 

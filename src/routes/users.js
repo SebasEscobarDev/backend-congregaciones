@@ -7,7 +7,8 @@ import {
     updateUser,
     deleteUser,
     login,
-    getUserLogin
+    getUserLogin,
+    updateUserWithPass
 } from '../controllers/users'
 import { auth } from './auth'
 const router = Router()
@@ -43,6 +44,17 @@ router.put('/:id', [
     body('rol_id',"Debe Ingresar Un Rol De Usuario.").notEmpty().escape().trim().isInt(),
     body('congregacion_id',"Debe Ingresar Una Congregación Registrada.").notEmpty().escape().trim().isInt(),
 ], updateUser)
+
+router.put('/:id/pass', [ 
+    body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
+    body('email',"Dirección de email incorrecta")
+        .notEmpty()
+        .escape()
+        .trim().isEmail(),
+    body('active',"Debe indicar si el usuario estará activo.").notEmpty().escape().trim().isInt(),
+    body('rol_id',"Debe Ingresar Un Rol De Usuario.").notEmpty().escape().trim().isInt(),
+    body('congregacion_id',"Debe Ingresar Una Congregación Registrada.").notEmpty().escape().trim().isInt(),
+], updateUserWithPass)
 
 router.delete('/:id', deleteUser)
 

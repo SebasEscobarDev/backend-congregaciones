@@ -28,7 +28,7 @@ Card.init({
     }
 }, { 
     sequelize, 
-    modelName: 'card', 
+    modelName: 'card',
     tableName: 'cards',
     timestamps: false
 });
