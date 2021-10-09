@@ -1,5 +1,6 @@
 import ContactoModel from './ORM/Contacto';
-import { literal, cast, col } from 'sequelize'
+import moment from 'moment'
+import { literal, cast, col, fn } from 'sequelize'
 
 class Contacto {
     constructor(){
@@ -39,10 +40,13 @@ class Contacto {
                 phone: body.phone,
                 country: body.country,
                 estadocontacto_id: body.estadocontacto_id,
+                last_send: moment().format(),
                 user_id: body.user_id,
-                congregacion_id: body.congregacion_id
+                congregacion_id: body.congregacion_id,
+                created_at: moment().format(),
+                updated_at: moment().format()
             },
-            { 
+            {
                 include: [
                     { association: 'estado', attributes: ['name'] },
                     { association: 'user', attributes: ['name'] },
@@ -60,7 +64,9 @@ class Contacto {
                 phone: body.phone,
                 country: body.country,
                 estadocontacto_id: body.estadocontacto_id,
-                user_id: body.user_id
+                last_send: body.last_send,
+                user_id: body.user_id,
+                updated_at: moment().format()
             },{ 
                 where : { id },
                 include: [

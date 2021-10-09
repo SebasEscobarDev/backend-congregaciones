@@ -48,7 +48,7 @@ class User {
                 password:           hashPass,
                 active:             body.active,
                 rol_id:             body.rol_id,
-                congregacion_id:    body.congregacion_id,
+                congregacion_id:    body.congregacion_id
             },
             {
                 include: [

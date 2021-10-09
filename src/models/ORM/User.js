@@ -34,7 +34,12 @@ User.init({
         type: DataTypes.BIGINT,
         allowNull: false
     }
-}, { sequelize, modelName: 'user', tableName: 'users' });
+}, { 
+    sequelize,
+    modelName: 'user',
+    tableName: 'users',
+    timestamps: false
+});
 
 User.belongsTo(Rol, { as:'rol', foreignKey: 'rol_id' });
 User.belongsTo(Congregacion, { as: 'congregacion', foreignKey: 'congregacion_id' });

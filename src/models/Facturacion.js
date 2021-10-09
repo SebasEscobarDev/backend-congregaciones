@@ -1,4 +1,5 @@
 import FacturacionModel from './ORM/Facturacion'
+import moment from 'moment'
 
 class Facturacion {
 
@@ -7,7 +8,7 @@ class Facturacion {
             include: [
                 { association: 'contacto' , attributes: ['name'] },
                 { association: 'user' , attributes: ['name'] },
-                { 
+                {
                     association: 'card' ,
                     attributes: ['values'],
                     include: [
@@ -48,7 +49,9 @@ class Facturacion {
                 moneda_id: body.moneda_id,
                 valor: body.valor,
                 estado_id: body.estado_id,
-                congregacion_id: body.congregacion_id
+                congregacion_id: body.congregacion_id,
+                created_at: moment().format(),
+                updated_at: moment().format()
             },
             {
                 include: [
@@ -71,7 +74,8 @@ class Facturacion {
                 card_id: body.card_id,
                 moneda_id: body.moneda_id,
                 valor: body.valor,
-                estado_id: body.estado_id
+                estado_id: body.estado_id,
+                updated_at: moment().format()
             },
             { 
                 where : { id },

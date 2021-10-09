@@ -45,8 +45,21 @@ Facturacion.init({
     congregacion_id: {
         type: DataTypes.BIGINT,
         allowNull: false
-    }
-}, { sequelize, modelName: 'facturacion', tableName: 'facturaciones' });
+    },
+    created_at: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    updated_at: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+}, { 
+    sequelize, 
+    modelName: 'facturacion', 
+    tableName: 'facturaciones',
+    timestamps: false
+});
 
 Facturacion.belongsTo(Contacto, { as: 'contacto', foreignKey: 'contacto_id' });
 Facturacion.belongsTo(User, { as: 'user', foreignKey: 'user_id' });

@@ -41,10 +41,11 @@ app.use('/api/facturaciones', facturacionesRoutes)
 
 app.listen(app.get('port'), () => {
 	console.log('Server iniciado en puerto: '+app.get('port'))
-	sequelize.sync({force:true})
+	//sequelize.sync({force:true})
 })
 
 //USERS
 //@HAIMETUTOYO
+//@DANIELAOVIEDO__
 
 export default app

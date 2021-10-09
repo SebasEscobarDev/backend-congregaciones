@@ -8,8 +8,8 @@ POST {{api}}/
 Content-Type: application/json
 
 {
-    "from": "Pruebas",
-    "name": "Josefito",
+    "from": "Pruebas22",
+    "name": "Ramiro22",
     "phone": "573148406835",
     "country": "COL",
     "estadocontacto_id": 1,

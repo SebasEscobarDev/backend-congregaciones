@@ -42,8 +42,21 @@ Contacto.init({
     congregacion_id: {
         type: DataTypes.BIGINT,
         allowNull: false
-    }
-}, { sequelize, modelName: 'contacto', tableName: 'contactos' })
+    },
+    created_at: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    updated_at: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+}, { 
+    sequelize, 
+    modelName: 'contacto', 
+    tableName: 'contactos',
+    timestamps: false,
+})
 
 Contacto.belongsTo(EstadoContacto, { as: 'estado', foreignKey: 'estadocontacto_id' })
 Contacto.belongsTo(User, { as: 'user', foreignKey: 'user_id', constraints: false })
