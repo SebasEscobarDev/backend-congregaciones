@@ -1,4 +1,4 @@
-@api = http://localhost:5500/api/congregaciones
+@api = http://18.191.241.194:5500/api/congregaciones
 
 ### GET ALL
 GET {{api}}/

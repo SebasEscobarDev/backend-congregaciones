@@ -1,4 +1,4 @@
-@api = http://localhost:5500/api/users
+@api = http://18.191.241.194:5500/api/users
 
 ### GET ALL
 GET {{api}}/
@@ -20,12 +20,12 @@ Content-Type: application/json
 GET {{api}}/1
 
 ### UPDATE BY ID
-PUT {{api}}/1
+PUT {{api}}/3
 Content-Type: application/json
 
 {
     "name":"Sebastián Gónzalez Escobar",
-    "email":"master@admin.com",
+    "email":"masteraf@admin.com",
     "password": "qaws12pj-22",
     "active":1,
     "rol_id":1,
@@ -49,3 +49,4 @@ Content-Type: application/json
 GET {{api}}/get/login
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE2MzA0MTczMjEsImV4cCI6MTYzMDUwMzcyMX0.dy1NVJW0gEHh1q-wJThed89gylO1Gr4RQcT5H8-FQvk
+

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./src/index.js",
-    "clean": "rm -rf dist && mkdir dist",
+    "clean": "rmdir /s /q dist && mkdir dist",
     "build-babel": "babel -d ./dist ./src -s",
     "build": "npm run clean && npm run build-babel",
     "start": "npm run build && node ./dist/index.js"
@@ -30,10 +30,11 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
     "@babel/node": "^7.14.9",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.14.9",
-    "babel-core": "^6.26.3",
     "nodemon": "^2.0.12"
   }
 }
