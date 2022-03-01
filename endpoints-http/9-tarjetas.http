@@ -1,4 +1,4 @@
-@api = http://18.191.241.194:5500/api/cards
+@api = http://localhost:2500/api/cards
 
 ### GET ALL
 GET {{api}}/
@@ -22,7 +22,7 @@ PUT {{api}}/1
 Content-Type: application/json
 
 {
-    "active":1,
+    "active":0,
     "values": ["WC.1020","1053855581"],
     "typecard_id":1,
     "congregacion_id":1

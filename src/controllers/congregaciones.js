@@ -13,6 +13,18 @@ export const getCongregaciones = async(req, res, next) => {
     }
 }
 
+export const getAllCongregaciones = async(req, res, next) => {
+    try{
+        const congregaciones = await Congregacion.getAllCongregaciones();
+        return res.status(200).json(congregaciones);
+    }catch( error ){
+        return res.status(500).json({
+            message: 'Internal server error',
+            error
+        });
+    }
+}
+
 export const getCongregacion = async(req, res, next) => {
     try{
         const user = await Congregacion.getCongregacion(req.params.id);

@@ -2,6 +2,7 @@ import { Router } from 'express'
 import { body } from 'express-validator'
 import {
     getCongregaciones,
+    getAllCongregaciones,
     createCongregacion,
     getCongregacion,
     updateCongregacion,
@@ -11,6 +12,8 @@ import { auth } from './auth'
 const router = Router()
 
 router.get('/', getCongregaciones);
+
+router.get('/all', getAllCongregaciones);
 
 router.post('/', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),

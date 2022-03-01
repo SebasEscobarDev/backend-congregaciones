@@ -7,6 +7,10 @@ class Congregacion {
         return await congregacion.getCongregaciones();
     }
 
+    static async getAllCongregaciones() {
+        return await congregacion.getAllCongregaciones();
+    }
+
     static async getCongregacion(id){
         return await congregacion.getCongregacion(id);
     }

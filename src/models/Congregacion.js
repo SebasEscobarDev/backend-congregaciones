@@ -8,6 +8,16 @@ class Congregacion {
 
     async getCongregaciones(){
         return await CongregacionModel.findAll({
+            where: {active: true},
+            order: [
+                ['id', 'ASC']
+            ],
+            raw: true
+        })
+    }
+
+    async getAllCongregaciones(){
+        return await CongregacionModel.findAll({
             order: [
                 ['id', 'ASC']
             ],
