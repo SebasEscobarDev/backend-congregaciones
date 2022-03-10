@@ -28,7 +28,6 @@ class Moneda {
     async createMoneda(body){
         return await MonedaModel.create({ 
                 name: body.name,
-                cop_value: body.cop_value,
                 congregacion_id: body.congregacion_id
             },{ 
                 include: [
@@ -42,7 +41,7 @@ class Moneda {
     async updateMoneda(id,body){
         return await MonedaModel.update({ 
                 name: body.name,
-                cop_value: body.cop_value,
+                congregacion_id: body.congregacion_id
             },{ 
                 include: [
                     { association: 'congregacion', attributes: ['name'] },

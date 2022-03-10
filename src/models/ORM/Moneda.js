@@ -13,10 +13,6 @@ Moneda.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    cop_value: {
-        type: DataTypes.DECIMAL(19,4),
-        allowNull: false,
-    },
     congregacion_id: {
         type: DataTypes.BIGINT,
         allowNull: false

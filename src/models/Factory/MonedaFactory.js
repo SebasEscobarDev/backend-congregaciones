@@ -11,12 +11,12 @@ class Moneda {
         return await moneda.getMoneda(id);
     }
 
-    static async createMoneda(name) {
-        return await moneda.createMoneda(name);
+    static async createMoneda(body) {
+        return await moneda.createMoneda(body);
     }
 
-    static async updateMoneda(id, name) {
-        return await moneda.updateMoneda(id, name);
+    static async updateMoneda(id, body) {
+        return await moneda.updateMoneda(id, body);
     }
 
     static async deleteMoneda(id){

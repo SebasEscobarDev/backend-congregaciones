@@ -1,15 +1,16 @@
 @api = http://18.191.241.194:5500/api/users
 
+@apiserver = https://congregapp.sebasescobar.com/api/users
 ### GET ALL
 GET {{api}}/
 
 ### CREATE
-POST {{api}}/
+POST {{apiserver}}/
 Content-Type: application/json
 
 {
     "name":"Sebastián Gónzalez Escobar",
-    "email":"master@admin.com",
+    "email":"master@admin.commm",
     "password": "qaws12pj-22",
     "active":1,
     "rol_id":1,

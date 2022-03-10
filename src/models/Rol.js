@@ -43,7 +43,8 @@ class Rol {
 
     async updateRol(id,body){
         return await RolModel.update({ 
-                name: body.name
+                name: body.name,
+                congregacion_id: body.congregacion_id
             },{ 
                 include: [
                     { association: 'congregacion', attributes: ['name'] },

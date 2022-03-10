@@ -1,10 +1,10 @@
 @api = http://localhost:2500/api/typescard
-
+@apiserver = https://congregapp.sebasescobar.com/api/typescard
 ### GET ALL
 GET {{api}}/
 
 ### CREATE
-POST {{api}}/
+POST {{apiserver}}/
 Content-Type: application/json
 
 {

@@ -1,10 +1,10 @@
 @api = http://18.191.241.194:5500/api/roles
-
+@apiserver = https://congregapp.sebasescobar.com/api/roles
 ### GET ALL
-GET {{api}}/
+GET {{apiserver}}/
 
 ### CREATE
-POST {{api}}/
+POST {{apiserver}}/
 Content-Type: application/json
 
 {
@@ -16,12 +16,12 @@ Content-Type: application/json
 GET {{api}}/1
 
 ### UPDATE BY ID
-PUT {{api}}/1
+PUT {{apiserver}}/7
 Content-Type: application/json
 
 {
     "name": "Administrador",
-    "congregacion_id":1
+    "congregacion_id":2
 }
 
 ### DELETE BY ID

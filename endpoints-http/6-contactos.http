@@ -1,10 +1,10 @@
 @api = http://18.191.241.194:5500/api/contactos
-
+@apiserver = https://congregapp.sebasescobar.com/api/contactos
 ### GET ALL
 GET {{api}}/
 
 ### CREATE
-POST {{api}}/
+POST {{apiserver}}/
 Content-Type: application/json
 
 {

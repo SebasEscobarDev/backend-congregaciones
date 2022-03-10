@@ -1,5 +1,6 @@
 @api = http://18.191.241.194:5500/api/monedas
 
+@apiserver = https://congregapp.sebasescobar.com/api/monedas
 ### GET ALL
 GET {{api}}/
 
@@ -9,7 +10,6 @@ Content-Type: application/json
 
 {
     "name": "USD",
-    "cop_value": 1000,
     "congregacion_id": 1
 }
 
@@ -22,7 +22,6 @@ Content-Type: application/json
 
 {
     "name": "COP",
-    "cop_value": 1000.00
 }
 
 ### DELETE BY ID

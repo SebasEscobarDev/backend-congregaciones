@@ -45,7 +45,8 @@ class EstadoFacturacion {
     async updateEstadoFacturacion(id,body){
         return await EstadoFacturacionModel.update({ 
                 name: body.name,
-                plural_name: body.plural_name
+                plural_name: body.plural_name,
+                congregacion_id: body.congregacion_id
             },{ 
                 include: [
                     { association: 'congregacion', attributes: ['name'] },

@@ -1,10 +1,10 @@
 @api = http://18.191.241.194:5500/api/facturaciones
-
+@apiserver = https://congregapp.sebasescobar.com/api/facturaciones
 ### GET ALL
-GET {{api}}/
+GET {{apiserver}}/
 
 ### CREATE
-POST {{api}}/
+POST {{apiserver}}/
 Content-Type: application/json
 
 {
