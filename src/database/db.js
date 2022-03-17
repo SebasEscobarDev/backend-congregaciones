@@ -9,6 +9,9 @@ export const sequelize = new Sequelize(
         host: config.host,
         dialect: 'postgres',
         logging: false,
+        define: {
+            timestamp: false,
+            underscored: true
+        }
     }
-    
 )

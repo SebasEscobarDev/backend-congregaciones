@@ -1,0 +1,29 @@
+@api = http://18.191.241.194:5500/api/billing/status
+@apiserver = https://congregapp.sebasescobar.com/api/billing/status
+
+### GET ALL
+GET {{apiserver}}/
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "En Revision",
+    "plural_name": "En Reevision"
+}
+
+### GET BY ID
+GET {{apiserver}}/1
+
+### UPDATE BY ID
+PATCH {{apiserver}}/1
+Content-Type: application/json
+
+{
+    "name": "En Revision UPDATE",
+    "plural_name": "En Reevision"
+}
+
+### DELETE BY ID
+DELETE {{apiserver}}/1

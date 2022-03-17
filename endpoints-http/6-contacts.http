@@ -1,0 +1,36 @@
+@api = http://18.191.241.194:5500/api/contacts
+@apiserver = https://congregapp.sebasescobar.com/api/contacts
+### GET ALL
+GET {{apiserver}}/
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "from": "Pruebas22",
+    "name": "Ramiro22",
+    "phone": "573148406835",
+    "country": "COL",
+    "master_id": 1,
+    "contactstatus_id": 1,
+}
+
+### GET BY ID
+GET {{apiserver}}/2
+
+### UPDATE BY ID
+PATCH {{apiserver}}/1
+Content-Type: application/json
+
+{
+    "from": "PATCH FROM",
+    "name": "PATCH RAMIRO",
+    "phone": "573148406835",
+    "country": "COL",
+    "master_id": 1,
+    "contactstatus_id": 1,
+}
+
+### DELETE BY ID
+DELETE {{apiserver}}/1

@@ -1,0 +1,46 @@
+@api = http://localhost:2500/api/cards/types
+@apiserver = https://congregapp.sebasescobar.com/api/cards/types
+### GET ALL
+GET {{apiserver}}/
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name":"Western Union",
+    "fields": ["Nombre","Número de identificación", "País", "Ciudad", "Código Postal"]
+}
+
+###
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name":"Money Gram",
+    "fields": ["Nombre","Número de identificación", "País", "Ciudad", "Código Postal"]
+}
+
+###
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name":"Efecty",
+    "fields": ["Nombre","Número de identificación", "Ciudad", "Código Postal"]
+}
+
+### GET BY ID
+GET {{apiserver}}/1
+
+### UPDATE BY ID
+PATCH {{apiserver}}/1
+Content-Type: application/json
+
+{
+    "name":"Western Union PATCHED",
+    "fields": ["Nombre","Número de identificación", "País", "Ciudad", "Código Postal"]
+}
+
+### DELETE BY ID
+DELETE {{apiserver}}/1

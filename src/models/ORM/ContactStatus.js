@@ -1,19 +1,19 @@
 import { DataTypes, Model } from 'sequelize'
 import { sequelize } from '../../database/db'
 
-class Card extends Model {}
-Card.init({
+class ContactStatus extends Model {}
+ContactStatus.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    active: DataTypes.BOOLEAN,
-    values: DataTypes.JSON
+    name: DataTypes.STRING,
+    plural_name: DataTypes.STRING
 }, { 
     sequelize, 
-    modelName: 'card',
-    tableName: 'cards'
+    modelName: 'contactstatus', 
+    tableName: 'contactstatuses'
 });
 
-export default Card
+export default ContactStatus

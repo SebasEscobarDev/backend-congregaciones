@@ -1,0 +1,38 @@
+@api = http://18.191.241.194:5500/api/billings
+@apiserver = https://congregapp.sebasescobar.com/api/billings
+### GET ALL
+GET {{apiserver}}/
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "currency_value": 30,
+    "cop_value": 115000,
+    "master_id": 1,
+    "currency_id": 1,
+    "card_id": 1,
+    "contact_id": 1,
+    "billingstatus_id": 1
+}
+
+### GET BY ID
+GET {{apiserver}}/1
+
+### UPDATE BY ID
+PATCH {{apiserver}}/1
+Content-Type: application/json
+
+{
+    "currency_value": 300,
+    "cop_value": 1150000,
+    "master_id": 1,
+    "currency_id": 1,
+    "card_id": 1,
+    "contact_id": 1,
+    "billingstatus_id": 1
+}
+
+### DELETE BY ID
+DELETE {{apiserver}}/1

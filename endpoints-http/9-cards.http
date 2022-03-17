@@ -2,7 +2,7 @@
 @apiserver = https://congregapp.sebasescobar.com/api/cards
 
 ### GET ALL
-GET {{api}}/
+GET {{apiserver}}/
 
 ### CREATE
 POST {{apiserver}}/
@@ -10,23 +10,41 @@ Content-Type: application/json
 
 {
     "active":1,
-    "values": ["BC.1020","1053855581"],
-    "typecard_id":1,
-    "congregacion_id":1
+    "values": ["Sebastián González Escobar","1053855581", "Colombia", "Manizales", "170001"],
+    "cardtype_id":1,
 }
 
-### GET BY ID
-GET {{api}}/2
-
-### UPDATE BY ID
-PUT {{api}}/1
+### CREATE
+POST {{apiserver}}/
 Content-Type: application/json
 
 {
-    "active":0,
-    "values": ["WC.1020","1053855581"],
-    "typecard_id":1,
-    "congregacion_id":1
+    "active":1,
+    "values": ["Lizeth Catalina Gómez Moreno","1018502364", "Colombia", "Manizales", "170001"],
+    "cardtype_id":1,
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "active":1,
+    "values": ["Sebastián González Escobar","1053855581", "Manizales", "170001"],
+    "cardtype_id":2,
+}
+
+### GET BY ID
+GET {{apiserver}}/2
+
+### UPDATE BY ID
+PATCH {{apiserver}}/1
+Content-Type: application/json
+
+{
+    "active":1,
+    "values": ["Sebastián González Escobar PATCHED","1053855581", "Colombia", "Manizales", "170001"],
+    "cardtype_id":1,
 }
 ### DELETE BY ID
-DELETE {{api}}/1
+DELETE {{apiserver}}/1

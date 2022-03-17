@@ -1,29 +1,29 @@
 import { Router } from 'express'
 import { body } from 'express-validator'
 import {
-    getRoles,
-    createRol,
-    getRol,
-    updateRol,
-    deleteRol
-} from '../controllers/roles'
+    getBillingStatuses,
+    createBillingStatus,
+    getBillingStatus,
+    updateBillingStatus,
+    deleteBillingStatus
+} from '../controllers/billingStatus'
 import { auth } from './auth'
 const router = Router()
 
-router.get('/', getRoles);
+router.get('/', getBillingStatuses);
 
 router.post('/', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
-], createRol)
+], createBillingStatus)
 
 router.get('/:id', [
-    body('id',"Debe Ingresar Un ROL ID válido.").notEmpty().escape().trim().isInt(),
-], getRol)
+    body('id',"Debe Ingresar Un ID válido.").notEmpty().escape().trim().isInt(),
+], getBillingStatus)
 
 router.patch('/:id', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
-], updateRol)
+], updateBillingStatus)
 
-router.delete('/:id', deleteRol)
+router.delete('/:id', deleteBillingStatus)
 
 export default router

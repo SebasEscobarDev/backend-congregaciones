@@ -3,20 +3,20 @@ import morgan from 'morgan'
 import cors from 'cors';
 import session from 'express-session'
 import { config as dotenv } from "dotenv"
-import congregacionesRoutes from './routes/congregaciones'
-import rolesRoutes from './routes/roles'
-import usersRoutes from './routes/users'
-import estadoscRoutes from './routes/estadosContactos'
-import estadosfRoutes from './routes/estadosFacturaciones'
-import monedasRoutes from './routes/monedas'
-import contactosRoutes from './routes/contactos'
-import typescardRoutes from './routes/typesCard'
-import cardsRoutes from './routes/cards'
-import facturacionesRoutes from './routes/facturaciones'
 import { sequelize } from './database/db'
+import rolesRoutes from './routes/roles'
+import contactStatusRoutes from './routes/contactStatus'
+import billingStatusRoutes from './routes/billingStatus'
+import mastersRoutes from './routes/masters'
+import contactsRoutes from './routes/contacts'
+import currenciesRoutes from './routes/currencies'
+import cardsTypesRoutes from './routes/cardsTypes'
+import cardsRoutes from './routes/cards'
+import billingsRoutes from './routes/billings'
+//Incluir asociasiones de tablas
+require('./models/associations')
 
 const app = express()
-
 //DOTENV PARA LEER VARIABLES GLOBALES .ENV
 dotenv()
 
@@ -28,24 +28,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //usar rutas
-app.use('/api/congregaciones', congregacionesRoutes)
 app.use('/api/roles', rolesRoutes)
-app.use('/api/users', usersRoutes)
-app.use('/api/estadoscontacto', estadoscRoutes)
-app.use('/api/estadosfacturacion', estadosfRoutes)
-app.use('/api/monedas', monedasRoutes)
-app.use('/api/contactos', contactosRoutes)
-app.use('/api/typescard', typescardRoutes)
+app.use('/api/contact/status', contactStatusRoutes)
+app.use('/api/billing/status', billingStatusRoutes)
+app.use('/api/masters', mastersRoutes)
+app.use('/api/contacts', contactsRoutes)
+app.use('/api/currencies', currenciesRoutes)
+app.use('/api/cards/types', cardsTypesRoutes)
 app.use('/api/cards', cardsRoutes)
-app.use('/api/facturaciones', facturacionesRoutes)
+app.use('/api/billings', billingsRoutes)
 
 app.listen(app.get('port'), () => {
 	console.log('Server iniciado en puerto: '+app.get('port'))
-	sequelize.sync({force:true})
+	sequelize.sync({ force:true }).then( () => {
+		console.log( "DB SYNC TRUE" )
+	}).catch(error => {
+		console.log( 'se ha producido un error', error )
+	})
 })
-
-//USERS
-//@HAIMETUTOYO
-//@DANIELAOVIEDO__
 
 export default app

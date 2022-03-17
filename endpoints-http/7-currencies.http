@@ -1,5 +1,6 @@
-@api = http://18.191.241.194:5500/api/roles
-@apiserver = https://congregapp.sebasescobar.com/api/roles
+@api = http://18.191.241.194:5500/api/currencies
+
+@apiserver = https://congregapp.sebasescobar.com/api/currencies
 ### GET ALL
 GET {{apiserver}}/
 
@@ -8,18 +9,18 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
-    "name": "Administrador"
+    "name": "USD"
 }
 
 ### GET BY ID
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/7
+PATCH {{apiserver}}/1
 Content-Type: application/json
 
 {
-    "name": "Administrador"
+    "name": "USD PATCH",
 }
 
 ### DELETE BY ID

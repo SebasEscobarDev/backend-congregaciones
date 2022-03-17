@@ -2,15 +2,11 @@ import CardModel from './ORM/Card';
 import { literal, cast, col, json } from 'sequelize'
 
 class Card {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
 
     async getCards(){
         return await CardModel.findAll({
             include: [
-                { association: 'typecard', attributes: ['name','fields'] },
-                { association: 'congregacion', attributes: ['name'] },
+                { association: 'cardtype', attributes: ['name','fields'] }
             ],
             order: [
                 ['id', 'ASC']
@@ -22,8 +18,7 @@ class Card {
     async getCard(id){
         return await CardModel.findOne({
             include: [
-                { association: 'typecard', attributes: ['name'] },
-                { association: 'congregacion', attributes: ['name'] },
+                { association: 'cardtype', attributes: ['name','fields'] }
             ],
             where: { id },
             raw: true 
@@ -34,13 +29,11 @@ class Card {
         return await CardModel.create({ 
                 active: body.active,
                 values: body.values,
-                typecard_id: body.typecard_id,
-                congregacion_id: body.congregacion_id
+                cardtype_id: body.cardtype_id
             },
             { 
                 include: [
-                    { association: 'typecard', attributes: ['name'] },
-                    { association: 'congregacion', attributes: ['name'] },
+                    { association: 'cardtype', attributes: ['name','fields'] }
                 ],
                 raw: true,
                 returning: true
@@ -52,13 +45,12 @@ class Card {
         return await CardModel.update({ 
                 active: body.active,
                 values: body.values,
-                typecard_id: body.typecard_id,
+                cardtype_id: body.cardtype_id,
             },
             { 
                 where : { id },
                 include: [
-                    { association: 'typecard', attributes: ['name'] },
-                    { association: 'congregacion', attributes: ['name'] },
+                    { association: 'cardtype', attributes: ['name','fields'] }
                 ],
                 returning: true,
                 raw: true

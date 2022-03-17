@@ -1,0 +1,51 @@
+@api = http://18.191.241.194:5500/api/masters
+
+@apiserver = https://congregapp.sebasescobar.com/api/masters
+### GET ALL
+GET {{apiserver}}/
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name":"Sebastián Gónzalez Escobar",
+    "phone":"3148406835",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":1,
+}
+
+### GET BY ID
+GET {{apiserver}}/1
+
+### UPDATE BY ID
+PATCH {{apiserver}}/3
+Content-Type: application/json
+
+{
+    "name":"Sebastián Gónzalez Escobar Update",
+    "phone":"3148406835",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":1,
+}
+
+### DELETE BY ID
+DELETE {{apiserver}}/3
+
+
+###
+POST {{apiserver}}/login
+Content-Type: application/json
+
+{
+    "email":"3148406835",
+    "password": "qaws12pj-22"
+}
+
+###
+GET {{apiserver}}/get/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE2MzA0MTczMjEsImV4cCI6MTYzMDUwMzcyMX0.dy1NVJW0gEHh1q-wJThed89gylO1Gr4RQcT5H8-FQvk
+

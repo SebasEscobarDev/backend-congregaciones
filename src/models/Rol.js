@@ -2,15 +2,8 @@ import RolModel from './ORM/Rol';
 import { literal, cast, col } from 'sequelize'
 
 class Rol {
-    constructor(){
-        this.mivareable = '"dofus"';
-    }
-
     async getRoles(){
         return await RolModel.findAll({
-            include: [
-                { association: 'congregacion', attributes: ['name'] },
-            ],
             order: [
                 ['id', 'ASC']
             ],
@@ -20,9 +13,6 @@ class Rol {
 
     async getRol(id){
         return await RolModel.findOne({
-            include: [
-                { association: 'congregacion', attributes: ['name'] },
-            ],
             where: { id },
             raw: true 
         })
@@ -30,12 +20,8 @@ class Rol {
 
     async createRol(body){
         return await RolModel.create({ 
-                name: body.name,
-                congregacion_id: body.congregacion_id
+                name: body.name
             },{ 
-                include: [
-                    { association: 'congregacion', attributes: ['name'] },
-                ],
                 raw: true 
             }
         )
@@ -43,12 +29,8 @@ class Rol {
 
     async updateRol(id,body){
         return await RolModel.update({ 
-                name: body.name,
-                congregacion_id: body.congregacion_id
+                name: body.name
             },{ 
-                include: [
-                    { association: 'congregacion', attributes: ['name'] },
-                ],
                 where: { id }, 
                 returning: true 
             }

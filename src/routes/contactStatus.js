@@ -1,29 +1,29 @@
 import { Router } from 'express'
 import { body } from 'express-validator'
 import {
-    getRoles,
-    createRol,
-    getRol,
-    updateRol,
-    deleteRol
-} from '../controllers/roles'
+    getContactStatus,
+    createContactStatus,
+    getContactStatusOne,
+    updateContactStatus,
+    deleteContactStatus
+} from '../controllers/contactStatus'
 import { auth } from './auth'
 const router = Router()
 
-router.get('/', getRoles);
+router.get('/', getContactStatus);
 
 router.post('/', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
-], createRol)
+], createContactStatus)
 
 router.get('/:id', [
-    body('id',"Debe Ingresar Un ROL ID válido.").notEmpty().escape().trim().isInt(),
-], getRol)
+    body('id',"Debe Ingresar Un ID válido.").notEmpty().escape().trim().isInt(),
+], getContactStatusOne)
 
 router.patch('/:id', [ 
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
-], updateRol)
+], updateContactStatus)
 
-router.delete('/:id', deleteRol)
+router.delete('/:id', deleteContactStatus)
 
 export default router
