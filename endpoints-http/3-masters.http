@@ -10,10 +10,10 @@ Content-Type: application/json
 
 {
     "name":"Sebastián Gónzalez Escobar",
-    "phone":"3148406835",
+    "phone":"314840",
     "password": "qaws12pj-22",
     "active":1,
-    "rol_id":1,
+    "rol_id":1
 }
 
 ### GET BY ID

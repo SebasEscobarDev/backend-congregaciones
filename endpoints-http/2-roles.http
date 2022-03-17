@@ -8,14 +8,14 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
-    "name": "Administrador"
+    "name": "Maestro"
 }
 
 ### GET BY ID
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/7
+PATCH {{apiserver}}/1
 Content-Type: application/json
 
 {
