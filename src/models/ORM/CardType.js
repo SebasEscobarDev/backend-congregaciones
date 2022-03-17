@@ -20,7 +20,8 @@ CardType.init({
 }, { 
     sequelize, 
     modelName: 'cardtype',
-    tableName: 'cardstypes'
+    tableName: 'cardstypes',
+    timestamps: false
 });
 
 export default CardType

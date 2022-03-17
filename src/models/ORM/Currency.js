@@ -19,7 +19,8 @@ Currency.init({
 }, { 
     sequelize, 
     modelName: 'currency',
-    tableName: 'currencies'
+    tableName: 'currencies',
+    timestamps: false
 });
 
 export default Currency

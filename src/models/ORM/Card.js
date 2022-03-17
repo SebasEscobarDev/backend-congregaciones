@@ -13,7 +13,8 @@ Card.init({
 }, { 
     sequelize, 
     modelName: 'card',
-    tableName: 'cards'
+    tableName: 'cards',
+    timestamps: false
 });
 
 export default Card

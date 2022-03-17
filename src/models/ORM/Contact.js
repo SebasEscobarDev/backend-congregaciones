@@ -30,7 +30,8 @@ Contact.init({
 }, {
     sequelize, 
     modelName: 'contact', 
-    tableName: 'contacts'
+    tableName: 'contacts',
+    timestamps: false
 })
 
 export default Contact

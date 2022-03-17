@@ -13,7 +13,8 @@ ContactStatus.init({
 }, { 
     sequelize, 
     modelName: 'contactstatus', 
-    tableName: 'contactstatuses'
+    tableName: 'contactstatuses',
+    timestamps: false
 });
 
 export default ContactStatus

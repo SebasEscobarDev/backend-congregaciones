@@ -13,7 +13,8 @@ BillingStatus.init({
 }, { 
     sequelize, 
     modelName: 'billingstatus', 
-    tableName: 'billingstatuses'
+    tableName: 'billingstatuses',
+    timestamps: false
 });
 
 

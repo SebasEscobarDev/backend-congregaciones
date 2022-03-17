@@ -24,7 +24,8 @@ Billing.init({
 }, { 
     sequelize, 
     modelName: 'billing', 
-    tableName: 'billings'
+    tableName: 'billings',
+    timestamps: false
 });
 
 export default Billing
