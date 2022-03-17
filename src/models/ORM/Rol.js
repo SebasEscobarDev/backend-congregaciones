@@ -13,7 +13,8 @@ Rol.init({
     sequelize, 
     modelName: 'rol', 
     tableName: 'roles',
-    timestamps: false
+    timestamps: false,
+    underscored: true
 });
 
 export default Rol

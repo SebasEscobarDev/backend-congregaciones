@@ -37,7 +37,8 @@ Master.init({
     sequelize,
     modelName: 'master',
     tableName: 'masters',
-    timestamps: false
+    timestamps: false,
+    underscored: true
 });
 
 export default Master

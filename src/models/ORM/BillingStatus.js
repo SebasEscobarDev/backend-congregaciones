@@ -14,7 +14,8 @@ BillingStatus.init({
     sequelize, 
     modelName: 'billingstatus', 
     tableName: 'billingstatuses',
-    timestamps: false
+    timestamps: false,
+    underscored: true
 });
 
 

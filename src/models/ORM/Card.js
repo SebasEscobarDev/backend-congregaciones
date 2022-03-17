@@ -14,7 +14,8 @@ Card.init({
     sequelize, 
     modelName: 'card',
     tableName: 'cards',
-    timestamps: false
+    timestamps: false,
+    underscored: true
 });
 
 export default Card

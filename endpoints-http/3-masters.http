@@ -10,7 +10,8 @@ Content-Type: application/json
 
 {
     "name":"Sebastián Gónzalez Escobar",
-    "phone":"314840",
+    "phone":"3148406835",
+    "image":"url",
     "password": "qaws12pj-22",
     "active":1,
     "rol_id":1
@@ -20,15 +21,15 @@ Content-Type: application/json
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/3
+PATCH {{apiserver}}/1
 Content-Type: application/json
 
 {
     "name":"Sebastián Gónzalez Escobar Update",
     "phone":"3148406835",
-    "password": "qaws12pj-22",
+    "image":"linkimage",
     "active":1,
-    "rol_id":1,
+    "rol_id":1
 }
 
 ### DELETE BY ID
