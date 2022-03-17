@@ -8,14 +8,14 @@ Billing.init({
         primaryKey: true,
         autoIncrement: true
     },
-    currencyValue: {
+    currency_value: {
         type: DataTypes.INTEGER,
         allowNull: true,
         validate: {
             isInt: true
         }
     },
-    copValue: {
+    cop_value: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
