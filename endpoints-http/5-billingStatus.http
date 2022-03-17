@@ -9,8 +9,8 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
-    "name": "En Revision",
-    "plural_name": "En Reevision"
+    "name": "Rechazado",
+    "plural_name": "Rechazados"
 }
 
 ### GET BY ID

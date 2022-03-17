@@ -48,8 +48,8 @@ class Master {
                 password:           hashPass,
                 active:             body.active,
                 rol_id:             body.rol_id,
-                created_at:         moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
-                updated_at:         moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                created_at:         moment(new Date()).zone('-0500').format("YYYY-MM-DD hh:mm:ss"),
+                updated_at:         moment(new Date()).zone('-0500').format("YYYY-MM-DD hh:mm:ss"),
             },
             {
                 include: [
@@ -67,7 +67,7 @@ class Master {
                 image:              body.image,
                 active:             body.active,
                 rol_id:             body.rol_id,
-                updated_at:         moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                updated_at:         moment(new Date()).zone('-0500').format("YYYY-MM-DD hh:mm:ss"),
             },
             { 
                 where : { id },
@@ -89,7 +89,7 @@ class Master {
                 password:           hashPass,
                 active:             body.active,
                 rol_id:             body.rol_id,
-                updated_at:         moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                updated_at:         moment(new Date()).zone('-0500').format("YYYY-MM-DD hh:mm:ss"),
             },
             { 
                 where : { id },

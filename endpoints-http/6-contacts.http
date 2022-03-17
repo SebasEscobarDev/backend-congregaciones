@@ -13,7 +13,7 @@ Content-Type: application/json
     "phone": "573148406835",
     "country": "COL",
     "master_id": 1,
-    "contactstatus_id": 1,
+    "contactstatus_id": 1
 }
 
 ### GET BY ID
