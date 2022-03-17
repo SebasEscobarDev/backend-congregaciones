@@ -10,7 +10,7 @@ class Contact {
     async getContacts(){
         return await ContactModel.findAll({
             include: [
-                { association: 'contactstatus', attributes: ['name'] },
+                { association: 'status', attributes: ['name'] },
                 { association: 'master', attributes: ['name'] }
             ],
             order: [
@@ -23,7 +23,7 @@ class Contact {
     async getContact(id){
         return await ContactModel.findOne({
             include: [
-                { association: 'contactstatus', attributes: ['name'] },
+                { association: 'status', attributes: ['name'] },
                 { association: 'master', attributes: ['name'] }
             ],
             where: { id },
@@ -45,7 +45,7 @@ class Contact {
             },
             {
                 include: [
-                    { association: 'contactstatus', attributes: ['name'] },
+                    { association: 'status', attributes: ['name'] },
                     { association: 'master', attributes: ['name'] }
                 ],
                 raw: true 
@@ -65,7 +65,7 @@ class Contact {
             },{ 
                 where : { id },
                 include: [
-                    { association: 'contactstatus', attributes: ['name'] },
+                    { association: 'status', attributes: ['name'] },
                     { association: 'master', attributes: ['name'] }
                 ],
                 returning: true,

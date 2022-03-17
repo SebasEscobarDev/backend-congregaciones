@@ -22,12 +22,25 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
+    "name":"Lida Escobar",
+    "phone":"3105413233",
+    "image":"url",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":2
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
     "name":"Lizeth Catalina Gómez",
     "phone":"3148405919",
     "image":"url",
     "password": "qaws12pj-22",
     "active":1,
-    "rol_id":1
+    "rol_id":3
 }
 
 ### GET BY ID

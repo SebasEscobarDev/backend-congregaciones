@@ -16,11 +16,24 @@ Content-Type: application/json
     "contactstatus_id": 1
 }
 
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "from": "REST HTTP CLIENT",
+    "name": "Contacto prueba",
+    "phone": "+(57)314-840-6800",
+    "country": "COL",
+    "master_id": 1,
+    "contactstatus_id": 1
+}
+
 ### GET BY ID
 GET {{apiserver}}/2
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/1
+PATCH {{apiserver}}/2
 Content-Type: application/json
 
 {
@@ -29,7 +42,7 @@ Content-Type: application/json
     "phone": "573148406835",
     "country": "COL",
     "master_id": 1,
-    "contactstatus_id": 1,
+    "contactstatus_id": 1
 }
 
 ### DELETE BY ID

@@ -44,13 +44,13 @@ Content-Type: application/json
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/2
+PATCH {{apiserver}}/4
 Content-Type: application/json
 
 {
-    "name": "Pendiente",
-    "plural_name": "Pendientes",
+    "name": "No Responde",
+    "plural_name": "No Responden"
 }
 
 ### DELETE BY ID
-DELETE {{apiserver}}/1
+DELETE {{apiserver}}/5

@@ -16,11 +16,11 @@ Content-Type: application/json
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/1
+PATCH {{apiserver}}/5
 Content-Type: application/json
 
 {
-    "name": "USD PATCH",
+    "name": "EUR ( Euro )"
 }
 
 ### DELETE BY ID

@@ -15,7 +15,7 @@ class Billing {
                     ]
                 },
                 { association: 'contact' , attributes: ['name'] },
-                { association: 'billingstatus' , attributes: ['name'] },
+                { association: 'status' , attributes: ['name'] },
             ],
             order: [
                 ['id', 'ASC']
@@ -37,7 +37,7 @@ class Billing {
                     ]
                 },
                 { association: 'contact' , attributes: ['name'] },
-                { association: 'billingstatus' , attributes: ['name'] },
+                { association: 'status' , attributes: ['name'] },
             ],
             where: { id },
             raw: true 
@@ -68,7 +68,7 @@ class Billing {
                         ]
                     },
                     { association: 'contact' , attributes: ['name'] },
-                    { association: 'billingstatus' , attributes: ['name'] },
+                    { association: 'status' , attributes: ['name'] },
                 ],
                 raw: true
             }
@@ -99,7 +99,7 @@ class Billing {
                         ]
                     },
                     { association: 'contact' , attributes: ['name'] },
-                    { association: 'billingstatus' , attributes: ['name'] },
+                    { association: 'status' , attributes: ['name'] },
                 ],
                 returning: true,
                 raw: true

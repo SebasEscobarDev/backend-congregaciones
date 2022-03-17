@@ -21,4 +21,4 @@ Billing.belongsTo(Contact,          { as:'contact',         foreignKey: 'contact
 Billing.belongsTo(Master,           { as:'master',          foreignKey: 'master_id' })
 Billing.belongsTo(Card,             { as:'card',            foreignKey: 'card_id' })
 Billing.belongsTo(Currency,         { as:'currency',        foreignKey: 'currency_id' })
-Billing.belongsTo(BillingStatus,    { as:'billingstatus',   foreignKey: 'billingstatus_id' })
+Billing.belongsTo(BillingStatus,    { as:'status',          foreignKey: 'billingstatus_id' })

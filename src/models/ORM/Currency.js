@@ -12,7 +12,7 @@ Currency.init({
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [3,255]
+            len: [1,255]
         }
     },
 }, { 

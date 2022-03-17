@@ -11,7 +11,7 @@ Content-Type: application/json
 {
     "active":1,
     "values": ["Sebastián González Escobar","1053855581", "Colombia", "Manizales", "170001"],
-    "cardtype_id":1,
+    "cardtype_id":1
 }
 
 ### CREATE
@@ -21,7 +21,7 @@ Content-Type: application/json
 {
     "active":1,
     "values": ["Lizeth Catalina Gómez Moreno","1018502364", "Colombia", "Manizales", "170001"],
-    "cardtype_id":1,
+    "cardtype_id":1
 }
 
 ### CREATE
@@ -31,7 +31,7 @@ Content-Type: application/json
 {
     "active":1,
     "values": ["Sebastián González Escobar","1053855581", "Manizales", "170001"],
-    "cardtype_id":2,
+    "cardtype_id":2
 }
 
 ### GET BY ID
@@ -44,7 +44,7 @@ Content-Type: application/json
 {
     "active":1,
     "values": ["Sebastián González Escobar PATCHED","1053855581", "Colombia", "Manizales", "170001"],
-    "cardtype_id":1,
+    "cardtype_id":1
 }
 ### DELETE BY ID
 DELETE {{apiserver}}/1
