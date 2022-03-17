@@ -37,9 +37,9 @@ class Contact {
                 name: body.name,
                 phone: body.phone,
                 country: body.country,
-                last_send: moment().format(),
-                created_at: moment().format(),
-                updated_at: moment().format(),
+                last_send: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                created_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                updated_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
                 master_id: body.master_id,
                 contactstatus_id: body.contactstatus_id
             },
@@ -59,8 +59,7 @@ class Contact {
                 name: body.name,
                 phone: body.phone,
                 country: body.country,
-                last_send: moment().format(),
-                updated_at: moment().format(),
+                updated_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
                 master_id: body.master_id,
                 contactstatus_id: body.contactstatus_id
             },{ 

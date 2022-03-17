@@ -48,8 +48,8 @@ class Billing {
         return await BillingModel.create({ 
                 currency_value: body.currency_value,
                 cop_value: body.cop_value,
-                created_at: moment().format(),
-                updated_at: moment().format(),
+                created_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+                updated_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
                 master_id: body.master_id,
                 currency_id: body.currency_id,
                 card_id: body.card_id,
@@ -79,7 +79,7 @@ class Billing {
         return await BillingModel.update({ 
                 currency_value: body.currency_value,
                 cop_value: body.cop_value,
-                updated_at: moment().format(),
+                updated_at: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
                 master_id: body.master_id,
                 currency_id: body.currency_id,
                 card_id: body.card_id,
