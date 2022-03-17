@@ -11,12 +11,12 @@ class ContactStatus {
         return await contactStatus.getContactStatusOne(id);
     }
 
-    static async createContactStatus(name) {
-        return await contactStatus.createContactStatus(name);
+    static async createContactStatus(body) {
+        return await contactStatus.createContactStatus(body);
     }
 
-    static async updateContactStatus(id, name) {
-        return await contactStatus.updateContactStatus(id, name);
+    static async updateContactStatus(id, body) {
+        return await contactStatus.updateContactStatus(id, body);
     }
 
     static async deleteContactStatus(id){

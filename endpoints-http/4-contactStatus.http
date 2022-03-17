@@ -13,15 +13,43 @@ Content-Type: application/json
     "plural_name": "Nuevos"
 }
 
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "Pendiente",
+    "plural_name": "Pendientes"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "En Consulta",
+    "plural_name": "Consultas"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "No Responde",
+    "plural_name": "No Responden"
+}
+
 ### GET BY ID
 GET {{apiserver}}/1
 
 ### UPDATE BY ID
-PATCH {{apiserver}}/1
+PATCH {{apiserver}}/2
 Content-Type: application/json
 
 {
-    "name": "Nuevo UPDATE"
+    "name": "Pendiente",
+    "plural_name": "Pendientes",
 }
 
 ### DELETE BY ID

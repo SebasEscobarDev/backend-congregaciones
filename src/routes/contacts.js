@@ -16,7 +16,6 @@ router.post('/', [
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
     body('phone',"Debe Ingresar Un Número Válido.").notEmpty().escape().trim().isInt(),
     body('country',"Debe Ingresar Un valor para el País.").notEmpty().escape().trim().isInt(),
-    body('last_send',"Debe Ingresar Ultimo Envio Del Contacto.").notEmpty().escape().trim().isInt(),
     body('master_id',"Debe Ingresar El Maestro Asignado.").notEmpty().escape().trim().isInt(),
     body('contactstatus_id',"Debe Ingresar El Estado Del Contacto.").notEmpty().escape().trim().isInt(),
 ], createContact)
@@ -30,7 +29,6 @@ router.patch('/:id', [
     body('name',"Debe Ingresar Un Nombre.").notEmpty().escape().trim().isLength({ min: 3 }),
     body('phone',"Debe Ingresar Un Número Válido.").notEmpty().escape().trim().isInt(),
     body('country',"Debe Ingresar Un valor para el País.").notEmpty().escape().trim().isInt(),
-    body('last_send',"Debe Ingresar Ultimo Envio Del Contacto.").notEmpty().escape().trim().isInt(),
     body('master_id',"Debe Ingresar El Maestro Asignado.").notEmpty().escape().trim().isInt(),
     body('contactstatus_id',"Debe Ingresar El Estado Del Contacto.").notEmpty().escape().trim().isInt(),
 ], updateContact)

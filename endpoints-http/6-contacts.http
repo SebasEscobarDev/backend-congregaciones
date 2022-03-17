@@ -8,9 +8,9 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
-    "from": "Pruebas22",
-    "name": "Ramiro22",
-    "phone": "573148406835",
+    "from": "REST HTTP CLIENT",
+    "name": "Contacto 1",
+    "phone": "+(57)314-840-6835",
     "country": "COL",
     "master_id": 1,
     "contactstatus_id": 1

@@ -8,6 +8,22 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
+    "name": "Administrador"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "Supervisor"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
     "name": "Maestro"
 }
 

@@ -9,6 +9,24 @@ POST {{apiserver}}/
 Content-Type: application/json
 
 {
+    "name": "En Revisión",
+    "plural_name": "Revisiones"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "Aprobado",
+    "plural_name": "Aprobados"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
     "name": "Rechazado",
     "plural_name": "Rechazados"
 }

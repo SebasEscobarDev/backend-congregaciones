@@ -17,6 +17,19 @@ Content-Type: application/json
     "rol_id":1
 }
 
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name":"Lizeth Catalina Gómez",
+    "phone":"3148405919",
+    "image":"url",
+    "password": "qaws12pj-22",
+    "active":1,
+    "rol_id":1
+}
+
 ### GET BY ID
 GET {{apiserver}}/1
 
@@ -41,7 +54,7 @@ POST {{apiserver}}/login
 Content-Type: application/json
 
 {
-    "email":"3148406835",
+    "phone":"3148406835",
     "password": "qaws12pj-22"
 }
 

@@ -58,8 +58,7 @@ router.delete('/:id', deleteMaster)
 router.post('/login',[
     body('phone',"Invalid Phone Number")
         .notEmpty()
-        .trim()
-        .isEmail(),
+        .trim(),
     body('password',"The Password must be of minimum 4 characters length")
         .notEmpty()
         .trim()
