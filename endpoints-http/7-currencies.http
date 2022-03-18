@@ -12,6 +12,30 @@ Content-Type: application/json
     "name": "USD"
 }
 
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "COP"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "EUR"
+}
+
+### CREATE
+POST {{apiserver}}/
+Content-Type: application/json
+
+{
+    "name": "HNL"
+}
+
 ### GET BY ID
 GET {{apiserver}}/1
 

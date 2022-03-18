@@ -14,7 +14,7 @@ import cardsTypesRoutes from './routes/cardsTypes'
 import cardsRoutes from './routes/cards'
 import billingsRoutes from './routes/billings'
 //Incluir asociasiones de tablas
-require('./models/associations')
+import './models/associations'
 
 const app = express()
 //DOTENV PARA LEER VARIABLES GLOBALES .ENV

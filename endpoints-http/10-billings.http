@@ -26,7 +26,7 @@ Content-Type: application/json
 
 {
     "currency_value": 300,
-    "cop_value": 1150000,
+    "cop_value": 260000,
     "master_id": 1,
     "currency_id": 1,
     "card_id": 1,
